@@ -66,8 +66,8 @@ export default function HomeMenu() {
 
 
   return (
-    <section className="">
-      {/* <div className="absolute left-0 right-0 w-full justify-start">
+		<section className="">
+			{/* <div className="absolute left-0 right-0 w-full justify-start">
         <div className="absolute left-0 -top-[70px] text-left -z-10">
           <Image src={'/1.png'} width={109} height={289}  alt={'card'} />
         </div>
@@ -75,16 +75,18 @@ export default function HomeMenu() {
           <Image src={'/sallad2.png'} width={107} height={195} alt={'sallad'} />
         </div>
       </div> */}
-      <div className="text-center mb-4">
-        <SectionHeaders
-          subHeader={'check out'}
-          mainHeader={'Our Best Sellers'} />
-      </div>
-      <div className="grid sm:grid-cols-3 gap-4">
-        {bestSellers?.length > 0 && bestSellers.map(item => (
-          <MenuItem key={item._id} {...item} />
-        ))}
-      </div>
-    </section>
-  );
+			<div className="text-center mb-4">
+				<SectionHeaders
+					subHeader={'check out'}
+					mainHeader={'Our Best Sellers'}
+				/>
+			</div>
+			<div className="grid sm:grid-cols-3 grid-cols-2 gap-4">
+				{bestSellers?.length > 0 &&
+					bestSellers.map((item) => (
+						<MenuItem key={item._id} {...item} />
+					))}
+			</div>
+		</section>
+	);
 }
